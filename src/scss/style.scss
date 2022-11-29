@@ -1,0 +1,18 @@
+@import 'nullstyle.scss';
+
+$font-size: 1rem;
+$font-color: lch(28 99 35);
+
+html {
+	font-size: $font-size;
+	color: $font-color;
+}
+html {
+	font-family: 'Arial Black';
+}
+p {
+	font-family: 'Aboreto';
+}
+div {
+	font-family: 'Aboreto';
+}
