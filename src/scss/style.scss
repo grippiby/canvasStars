@@ -20,12 +20,8 @@ canvas {
 	border: 3px solid black;
 }
 .color-cell {
+	display: none;
 	max-width: 200px;
 	min-width: none;
 	height: 100px;
 }
-/* .star {
-	display: none;
-	margin: 0 auto;
-	text-align: center;
-} */

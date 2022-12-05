@@ -1,15 +1,10 @@
 const img = new Image()
-img.crossOrigin = 'anonymous'
-img.src = dataURL
+/* img.crossOrigin = 'anonymous' */
+/* img.src = dataURL */
 
-var canvas1 = document.getElementById('colorChecker')
-var dataURL = canvas1.toDataURL()
-console.log(dataURL)
-/* 
-var image = new Image()
-image.id = 'pic'
-image.src = canvas.toDataURL()
-document.getElementById('image_for_crop').appendChild(image) */
+const canvas1 = document.getElementById('colorChecker')
+const dataURL = canvas1.toDataURL()
+/* console.log(dataURL) */
 
 const canvas = document.getElementById('colorChecker')
 const ctx = canvas.getContext('2d')
@@ -18,7 +13,7 @@ img.addEventListener('load', () => {
 	img.style.display = 'none'
 })
 const hoveredColor = document.getElementById('hovered-color')
-const selectedColor = document.getElementById('selected-color')
+const selectedColor = document.getElementById('star')
 
 function pick(event, destination) {
 	const bounding = canvas.getBoundingClientRect()
