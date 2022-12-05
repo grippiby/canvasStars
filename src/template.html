@@ -9,45 +9,28 @@
 		<div>Huina polnaya so shriftom</div>
 		<p>govno 4to za dermo</p> -->
 		<!-- 	<div><canvas id="newCanvas" width="250" height="250"></canvas></div> -->
-		<canvas id="star" width="220" height="220"></canvas>
-		<canvas id="colorChecker" width="220" height="220"></canvas>
+		<canvas class="star" id="star" width="220" height="220"></canvas>
+		<canvas id="colorChecker" width="1200" height="220"></canvas>
 		<img id="myImage" />
-		<script>
-			const canvas = document.getElementById('star')
-			const ctx = canvas.getContext('2d')
-			/* 
-			var numberOfStars = 5
-			for (var i = 0; i < numberOfStars; i++) {
-				var thickness = 300 / numberOfStars
-				drawingContext.beginPath()
-				drawingContext.strokeStyle = i % 2 ? color1 : color2
-				drawingContext.lineWidth = thickness
-
-				drawingContext.moveTo(i * thickness + thickness / 2, 0)
-				drawingContext.lineTo(i * thickness + thickness / 2, 300)
-				drawingContext.stroke()
-			} */
-			ctx.fillStyle = 'blue' //variable
-			ctx.beginPath()
-			ctx.moveTo(108, 6)
-			ctx.lineTo(141, 70)
-			ctx.lineTo(218, 78.3)
-			ctx.lineTo(162, 131)
-			ctx.lineTo(175, 205)
-			ctx.lineTo(108, 170)
-			ctx.lineTo(41.2, 205)
-			ctx.lineTo(55, 131)
-			ctx.lineTo(1, 78)
-			ctx.lineTo(75, 68)
-			ctx.lineTo(108, 6)
-			ctx.closePath()
-			ctx.fill()
-
-			/* const pattern = ctx.createPattern(patternCanvas, 'repeat')
-			ctx.fillStyle = pattern
-			ctx.fillRect(0, 0, canvas.width, canvas.height)
-			var myImage = document.getElementById('myImage')
-			myImage.src = myCanvas.toDataURL() */
-		</script>
+		<div class="color-cell" id="hovered-color"></div>
+		<div class="color-cell" id="selected-color"></div>
+		<!-- <table>
+			<thead>
+				<tr>
+					<th>Hovered color</th>
+					<th>Selected color</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>
+						<canvas id="canvas" width="1200" height="227"></canvas>
+					</td>
+					<td class="color-cell" id="hovered-color"></td>
+					<td class="color-cell" id="selected-color"></td>
+				</tr>
+			</tbody>
+		</table> -->
+		<script></script>
 	</body>
 </html>
