@@ -1,5 +1,5 @@
 import './main.scss'
 import './assets/fonts/fonts.scss'
-import './scripts/randomColour.js'
+import './scripts/randomColor.js'
 import './scripts/drawStar.js'
-import './scripts/changeColour.js'
+import './scripts/changeColor.js'

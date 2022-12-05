@@ -6,22 +6,10 @@ $font-color: lch(28 99 35);
 html {
 	font-size: $font-size;
 	color: $font-color;
-}
-html {
-	font-family: 'Arial Black';
-}
-p {
-	font-family: 'Aboreto';
-}
-div {
 	font-family: 'Aboreto';
 }
 canvas {
 	border: 3px solid black;
-}
-.color-cell {
-	display: none;
-	max-width: 200px;
-	min-width: none;
-	height: 100px;
+	margin-left: 30px;
+	margin-top: 30px;
 }

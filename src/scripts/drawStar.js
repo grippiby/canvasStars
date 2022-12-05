@@ -1,16 +1,12 @@
-// get Random COlour
-function generateRandomColor() {
-	let maxVal = 0xffffff // 16777215
-	let randomNumber = Math.random() * maxVal
-	randomNumber = Math.floor(randomNumber)
-	randomNumber = randomNumber.toString(16)
-	let randColor = randomNumber.padStart(6, 0)
-	return `#${randColor.toUpperCase()}`
-}
+import { generateRandomColor } from './randomColor.js'
 
 //drawing 1 star
 const canvas = document.getElementById('star')
 const ctx = canvas.getContext('2d')
+
+const ctx1 = document.getElementById('colorChecker').getContext('2d')
+
+let elem = 0
 function getStar() {
 	ctx.fillStyle = generateRandomColor() //variable
 	ctx.beginPath()
@@ -29,16 +25,12 @@ function getStar() {
 	ctx.fill()
 }
 
-const c = document.getElementById('colorChecker')
-const ctx1 = c.getContext('2d')
-
-let elem = 0
 for (let i = 0; i < 5; i++) {
 	getStar()
 	let imgData = ctx.getImageData(0, 0, canvas.width, canvas.height)
 	ctx1.putImageData(imgData, elem, 0)
 	elem += 220
-	/* console.log(ctx1.putImageData) */
 }
+
 //очистка канваса 1 где рисуются звезды
 ctx.clearRect(0, 0, canvas.width, canvas.height)

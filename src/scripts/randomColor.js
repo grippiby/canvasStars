@@ -6,4 +6,3 @@ export function generateRandomColor() {
 	let randColor = randomNumber.padStart(6, 0)
 	return `#${randColor.toUpperCase()}`
 }
-console.log(generateRandomColor())
