@@ -1,14 +1,23 @@
 import { generateRandomColor } from './randomColor.js'
 
-//drawing 1 star
-const canvas = document.getElementById('star')
-const ctx = canvas.getContext('2d')
+export function drawStar() {
+	const canvas = document.getElementById('star')
+	const ctx = canvas.getContext('2d')
+	const ctx1 = document.getElementById('colorChecker').getContext('2d')
+	let elem = 0
+	for (let i = 0; i < 5; i++) {
+		getStar()
+		let imgData = ctx.getImageData(0, 0, canvas.width, canvas.height)
+		ctx1.putImageData(imgData, elem, 0)
+		elem += 220
+	}
+	ctx.clearRect(0, 0, canvas.width, canvas.height)
+}
 
-const ctx1 = document.getElementById('colorChecker').getContext('2d')
-
-let elem = 0
 function getStar() {
-	ctx.fillStyle = generateRandomColor() //variable
+	const canvas = document.getElementById('star')
+	const ctx = canvas.getContext('2d')
+	ctx.fillStyle = generateRandomColor()
 	ctx.beginPath()
 	ctx.moveTo(108, 6)
 	ctx.lineTo(141, 70)
@@ -24,13 +33,3 @@ function getStar() {
 	ctx.closePath()
 	ctx.fill()
 }
-
-for (let i = 0; i < 5; i++) {
-	getStar()
-	let imgData = ctx.getImageData(0, 0, canvas.width, canvas.height)
-	ctx1.putImageData(imgData, elem, 0)
-	elem += 220
-}
-
-//очистка канваса 1 где рисуются звезды
-ctx.clearRect(0, 0, canvas.width, canvas.height)
